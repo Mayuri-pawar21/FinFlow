@@ -76,14 +76,13 @@ FinFlow is designed by following software engineering principles that emphasize 
 These decisions are inspired by enterprise backend development practices commonly used in modern financial systems.
 
  ---
-## 🏗️ Documentation
+## 📚 Documentation
 
-- 📐 Architecture → `docs/architecture.md`
-- 🗄️ Database Design → `docs/database-design.md`
-- 📚 API Reference → `docs/api-reference.md`
-- ⚙️ System Design → `docs/system-design.md`
-- 🚀 Deployment Guide → `docs/deployment.md`
-
+- 📐 [Architecture](docs/architecture.md)
+- 🗄️ [Database Design](docs/database-design.md)
+- 📚 [API Reference](docs/api-reference.md)
+- ⚙️ [System Design](docs/system-design.md)
+- 🚀 [Deployment Guide](docs/deployment.md)
 ---
 
 ## 🛠️ Tech Stack
