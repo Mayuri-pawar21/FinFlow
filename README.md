@@ -57,7 +57,25 @@ Key objectives include:
 - Improve software design and documentation practices
 
  ---
-  
+ ## 🏛️ Design Philosophy
+
+FinFlow is designed by following software engineering principles that emphasize maintainability, scalability, and clean architecture over rapid feature development.
+
+### Core Design Decisions
+
+- **Layered Architecture** – Separates responsibilities into Controller, Service, Mapper, and Repository layers.
+- **DTO Pattern** – Keeps API contracts independent from database entities.
+- **Repository Pattern** – Abstracts database access using Spring Data JPA.
+- **Business Logic in Service Layer** – Keeps controllers lightweight and focused on request handling.
+- **Global Exception Handling** – Provides consistent and meaningful API error responses.
+- **UUID Primary Keys** – Enables globally unique identifiers suitable for distributed systems.
+- **BigDecimal for Monetary Values** – Prevents floating-point precision errors in financial calculations.
+- **Bean Validation** – Ensures invalid requests are rejected before reaching business logic.
+- **Constructor Injection** – Promotes immutability, easier testing, and loose coupling.
+
+These decisions are inspired by enterprise backend development practices commonly used in modern financial systems.
+
+ ---
 ## 🏗️ Documentation
 
 - 📐 Architecture → `docs/architecture.md`
@@ -81,6 +99,34 @@ Key objectives include:
 | Postman | API Testing |
 
 ---
+## 📂 Project Structure
+
+```text
+FinFlow
+│
+├── docs
+│   ├── architecture
+│   ├── architecture.md
+│   ├── api-reference.md
+│   ├── database-design.md
+│   ├── deployment.md
+│   └── system-design.md
+│
+├── postman
+│
+├── transaction-service
+│   ├── controller
+│   ├── dto
+│   ├── entity
+│   ├── exception
+│   ├── mapper
+│   ├── repository
+│   ├── service
+│   └── config
+│
+└── README.md
+```
+---
 
 ## 🚧 Project Status
 
@@ -90,6 +136,54 @@ Current implementation includes the Account Management module with layered archi
 
 Additional modules will be introduced incrementally following production-oriented design principles.
 
+---
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Mayuri-pawar21/FinFlow.git
+```
+
+### Navigate to the Project
+
+```bash
+cd FinFlow/transaction-service
+```
+
+### Configure MySQL
+
+Create a database named:
+
+```sql
+CREATE DATABASE finflow;
+```
+
+Update `application.properties` with your database credentials.
+
+### Run the Application
+
+```bash
+mvn spring-boot:run
+```
+
+The application will start on:
+
+```
+http://localhost:8080
+```
+---
+## 🗺️ Roadmap
+
+- ✅ Account Management
+- 🔄 Transaction Module
+- 📒 Double Entry Ledger
+- ⚡ Kafka Event Streaming
+- 🏦 Settlement Engine
+- 🛡️ Fraud Detection
+- 🐳 Docker
+- ☸️ Kubernetes
+- ☁️ Microservices
 ---
 
 ## 👩‍💻 Author
